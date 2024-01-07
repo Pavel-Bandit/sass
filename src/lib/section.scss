@@ -1,0 +1,23 @@
+@use './space.scss' as s ;
+@use './var.scss' as var ;
+
+.section {
+    display: flex;
+    justify-content: center;
+    padding: 0 s.space(4);
+}
+
+.section_content {
+    max-width: 1200px;
+    width: 100%;
+    
+}
+
+.section_double {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media all and (width < var.screen('laptop')) {
+        grid-template-columns: 1fr;
+    }
+}
